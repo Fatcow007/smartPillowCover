@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">smartPillowCover</string>
+
+
+    <!-- 사용자 표시용 문자열 -->
+    <string name="bluetooth_connected">블루투스 연결됨</string>
+    <string name="bluetooth_connecting">블루투스 연결중…</string>
+    <string name="bluetooth_searching">블루투스 검색중…</string>
+    <string name="bluetooth_not_connected">블루투스 연결 안됨</string>
+    <string name="bluetooth_connect_failed">블루투스 통신에 실패하였습니다.</string>
+    <string name="bluetooth_search_finished">블루투스 검색 완료</string>
+    <string name="bluetooth_already_searching">블루투스 검색이 진행중입니다.</string>
+
+    <!-- 송신 데이터 -->
+    <string name="request_alarm_time">알람시간요청</string>
+    <string name="overwrite_alarm_time">시간 변경</string>
+
+
+    <!-- 수신 데이터 -->
+    <string name="receive_humidity_data">습도</string>
+    <string name="receive_temperature_data">온도</string>
+    <string name="receive_snore_data">코골이</string>
+    <string name="receive_position_data">위치</string>
+    <string name="receive_time_data">시간</string>
+
+
+    <!-- UI용 문자열 -->
+    <string name="button_alarm">알람</string>
+    <string name="button_temp_humidity">온도/습도</string>
+    <string name="button_sleepdata">수면 데이터</string>
+    <string name="button_bluetooth">블루투스 검색</string>
+    <string name="text_bluetoothMAC">MAC:</string>
+    <string name="text_humidity">습도</string>
+    <string name="text_temperature">온도</string>
+
+    <!-- 데이터 저장용 문자열 -->
+    <string name="pref_date_list">date_list</string>
+    <string name="bluetooth_search_start_failed">블루투스 검색 실패</string>
+    <string name="text_snore">코골이</string>
+    <string name="alarm_text_example">3:30</string>
+    <string name="alarm_on_text">알람 켜짐</string>
+    <string name="alarm_off_text">알람 꺼짐</string>
+    <string name="vibration_on_text">진동 켜짐</string>
+    <string name="vibration_off_text">진동 꺼짐</string>
+    <string name="asmr_on_text">ASMR 켜짐</string>
+    <string name="asmr_off_text">ASMR 꺼짐</string>
+
+    <string-array name="alarm_music_array">
+        <item>1번음악</item>
+        <item>2번음악</item>
+        <item>3번음악</item>
+        <item>4번음악</item>
+        <item>5번음악</item>
+        <item>6번음악</item>
+        <item>7번음악</item>
+        <item>8번음악</item>
+        <item>9번음악</item>
+        <item>10번음악</item>
+    </string-array>
+
+</resources>
