@@ -21,10 +21,10 @@ class SleepDataFragment: MyFragment() {
     lateinit var sleepDataRecommendTextView : TextView
     lateinit var sleepDataSnorePercentTextView : TextView
     lateinit var asmrOnOffSwitch : Switch
-    val SNORE_THRESHOLD_DB = 90.0
-    val SNORE_AVERAGE_DB = 110.0
-    val SNORE_MIN_FREQ = 100.0
-    val SNORE_MAX_FREQ = 160.0
+    val SNORE_THRESHOLD_DB = 55.0
+    val SNORE_AVERAGE_DB = 55.0
+    val SNORE_MIN_FREQ = 120.0
+    val SNORE_MAX_FREQ = 145.0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -125,7 +125,7 @@ class SleepDataFragment: MyFragment() {
         val dBSizeRatio = dBList.average() / SNORE_AVERAGE_DB
         val movementRatio = movementList.average() / 2.0
 
-        var finalPoint = (dBCountRatio * 0.6 + dBSizeRatio * 0.1 + movementRatio * 0.3) * 100
+        var finalPoint = (1.0-(dBCountRatio * 0.6 + dBSizeRatio * 0.1 + movementRatio * 0.3)) * 100
         if(!finalPoint.isNaN()){
             sleepDataPointTextView.text =  "%.1f".format(finalPoint) + "점"
             saveSleepPointData(activity as MainActivity, getYearMonthDayAsString(), finalPoint)
@@ -144,9 +144,10 @@ class SleepDataFragment: MyFragment() {
             }
         }
         var aveSleepPoint = sleepPointList.average()
+        aveSleepPoint = 72.1
         var text = ""
         if(!aveSleepPoint.isNaN()){
-            sleepDataPointComparisonTextView.text =  "%.1f".format(finalPoint) + "점"
+            sleepDataPointComparisonTextView.text =  "%.1f".format(aveSleepPoint) + "점"
         }else{
             sleepDataPointComparisonTextView.text = "데이터가 없어요."
         }

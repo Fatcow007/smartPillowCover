@@ -44,8 +44,9 @@ class TempHumidFragment : MyFragment() {
     }
 
     fun getAverageValues(){
-        val aveTemp = (activity as MainActivity).currentTemp
-        val aveHumid = (activity as MainActivity).currentHumid
+        var aveTemp = (activity as MainActivity).currentTemp
+        var aveHumid = (activity as MainActivity).currentHumid
+
         val aveHumidInDecimal = aveHumid/100.0
         val discomfortValue = (9.0/5.0)*aveTemp - 0.55*(1.0-aveHumidInDecimal)*(((9.0/5.0)*aveTemp) - 26.0) + 32.0
         temphumidAverageTempTextView.text = "%.1f".format(aveTemp) + "°C"

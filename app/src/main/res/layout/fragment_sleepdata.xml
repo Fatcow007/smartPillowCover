@@ -57,7 +57,8 @@
         android:id="@+id/sleepDataPointLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="어제의 수면 점수"
+        android:text="어젯 밤
+         수면 점수"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +103,7 @@
         android:id="@+id/sleepDataSnorePercentLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="코골이 비율"
+        android:text="어젯 밤 코골이 비율"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

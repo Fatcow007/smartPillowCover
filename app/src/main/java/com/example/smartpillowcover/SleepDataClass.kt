@@ -30,6 +30,7 @@ var averageData : SortedMap<Int, SleepData> ?= null
 
 fun getFileName(date : String) : String{
     return FILE_PREFIX + date + "." + FILE_EXTENSION
+    //return FILE_PREFIX + "2020_06_10" + FILE_EXTENSION
 }
 
 
@@ -43,12 +44,18 @@ fun loadData(activity : MainActivity, date : String) : SortedMap<Int, SleepData>
             fis.close()
             currentData = sleepDataMap
             Log.d("DATA", "Data loaded successfully")
+
+            currentDay = date
             return sleepDataMap
         }else{
+
+            currentDay = date
             return currentData!!
         }
 
     }catch(e : FileNotFoundException){
+
+        currentDay = date
         return null
     }
 }
@@ -57,7 +64,6 @@ fun getAverageData(activity : MainActivity, date : String) : SortedMap<Int, Slee
     val averageCount = 10
     val resultData = sortedMapOf<Int, SleepData>()
     if(averageData == null || date != currentDay){
-        currentDay = date
         currentData = loadData(activity, date)
         val chunkedData = currentData?.values?.chunked(averageCount) ?: null
         if(chunkedData != null){

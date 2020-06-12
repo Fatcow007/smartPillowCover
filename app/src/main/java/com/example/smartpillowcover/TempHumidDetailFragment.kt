@@ -198,6 +198,7 @@ class TempHumidDetailFragment : MyFragment() , DatePickerFragment.DatePickedList
 
             val yOffsetRatio = 0.1
 
+
             val graphMaxY = humidGraphSeries.highestValueY
             val graphLowY = humidGraphSeries.lowestValueY
             val yDif = (graphMaxY - graphLowY) * yOffsetRatio
